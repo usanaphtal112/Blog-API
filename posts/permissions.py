@@ -1,7 +1,7 @@
 from rest_framework import permissions
 
 
-class IsAuthororReadOnly(permissions.BasePermission):
+class IsAuthorOrReadOnly(permissions.BasePermission):
     def has_permission(self, request, view):
         # Authenticated user only can see the list of blog post
         if request.user.is_authenticated:
