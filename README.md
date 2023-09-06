@@ -104,3 +104,5 @@ For detailed API documentation, please refer to the following links:
 ![Post List](Documentation/Screenshot_1.png)
 ![Login Authentication](Documentation/Screenshot_6.png)
 ![User List](Documentation/Screenshot_7.png)
+![Add New User](Documentation/Screenshot_8.png)
+![Add New Post](Documentation/Screenshot_9.png)
