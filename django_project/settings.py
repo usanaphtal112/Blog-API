@@ -37,46 +37,43 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.sites",  # new
+    "django.contrib.sites",
     # 3rd Party apps
-    "rest_framework",  # New
+    "rest_framework",
     "corsheaders",
-    "rest_framework.authtoken",  # new
-    "allauth",  # new
-    "allauth.account",  # new
-    "allauth.socialaccount",  # new
-    "dj_rest_auth",  # new
-    "dj_rest_auth.registration",  # new
-    "drf_spectacular",  # new
+    "rest_framework.authtoken",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    "drf_spectacular",
     # Local app
-    "accounts.apps.AccountsConfig",  # New
-    "posts.apps.PostsConfig",  # New
+    "accounts.apps.AccountsConfig",
+    "posts.apps.PostsConfig",
 ]
 
-REST_FRAMEWORK = {  # new
+REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        # "rest_framework.permissions.AllowAny",  # New
-        "rest_framework.permissions.IsAuthenticated",  # new
+        "rest_framework.permissions.IsAuthenticated",
     ],
-    "DEFAULT_AUTHENTICATION_CLASSES": [  # new
+    "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.SessionAuthentication",
-        # "rest_framework.authentication.BasicAuthentication",
-        "rest_framework.authentication.TokenAuthentication",  # new (TokenAuthentication, secure and handle multiple frontend)
+        "rest_framework.authentication.TokenAuthentication",
     ],
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",  # new
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 SPECTACULAR_SETTINGS = {
     "TITLE": "Blog API Project",
     "DESCRIPTION": "A sample blog to learn about DRF",
     "VERSION": "1.0.0",
-    # OTHER SETTINGS
 }
 
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "corsheaders.middleware.CorsMiddleware",  # new
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -90,7 +87,7 @@ CORS_ORIGIN_WHITELIST = (
     "http://localhost:8000",
 )
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]  # new
+# CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
 
 ROOT_URLCONF = "django_project.urls"
 
